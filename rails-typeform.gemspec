@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = Rails::Typeform::VERSION
   spec.authors     = ["Daniel Sjöblom"]
   spec.email       = ["daniel@ziney.co"]
-  spec.homepage    = "TODO"
+  spec.homepage    = "https://ziney.co"
   spec.summary     = "TODO: Summary of Rails::Typeform."
   spec.description = "TODO: Description of Rails::Typeform."
   spec.license     = "MIT"
