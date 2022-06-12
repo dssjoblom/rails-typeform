@@ -1,11 +1,14 @@
 require "rails/typeform/version"
 require "rails/typeform/engine"
+require "active_support/concern"
 
 module Rails
   module Typeform
     # Your code goes here...
 
     module Controller
+      extend ActiveSupport::Concern
+
       included do
         before_action :init_feedback_forms # Adds default load trigger. New triggers can be added with add_feedback_trigger
       end
