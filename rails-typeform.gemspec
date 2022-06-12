@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ["Daniel Sjöblom"]
   spec.email       = ["daniel@ziney.co"]
   spec.homepage    = "https://ziney.co"
-  spec.summary     = "TODO: Summary of Rails::Typeform."
-  spec.description = "TODO: Description of Rails::Typeform."
+  spec.summary     = "Summary of Rails::Typeform."
+  spec.description = "Description of Rails::Typeform."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
