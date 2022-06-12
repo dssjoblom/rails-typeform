@@ -1,3 +1,5 @@
+require 'browser'
+
 module Rails
   module Typeform
     class Engine < ::Rails::Engine
