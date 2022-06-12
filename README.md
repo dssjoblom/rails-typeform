@@ -17,6 +17,19 @@ helper Rails::Typeform::ApplicationHelper
 include Rails::Typeform::Controller
 ```
 
+In your ApplicationHelper (if not already defined):
+
+```ruby
+
+def current_user
+  # Implement "current_user" method
+end
+
+def user_signed_in?
+  # Implement "user_signed_in?" method
+end
+```
+
 In your application.html.erb:
 
 ```

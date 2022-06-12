@@ -10,7 +10,8 @@ module Rails
       extend ActiveSupport::Concern
 
       included do
-        before_action :init_feedback_forms # Adds default load trigger. New triggers can be added with add_feedback_trigger
+        # Adds default load trigger. New triggers can be added with add_feedback_trigger
+        before_action :init_feedback_forms
       end
 
       def init_feedback_forms
@@ -38,7 +39,13 @@ module Rails
             if form.logged_in_only and not user_signed_in?
               next
             end
-            if form.logged_in_beta_tester_only and (not user_signed_in? or not current_user.beta_tester)
+
+            beta_tester = false
+            if defined?(current_user.beta_tester)
+              beta_tester = current_user.beta_tester
+            end
+
+            if form.logged_in_beta_tester_only and (not user_signed_in? or not beta_tester)
               next
             end
 
