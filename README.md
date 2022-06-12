@@ -13,6 +13,7 @@ bin/rails rails_typeform:install:migrations
 In your ApplicationController:
 
 ```ruby
+helper Rails::Typeform::ApplicationHelper
 include Rails::Typeform::Controller
 ```
 

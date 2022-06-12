@@ -6,7 +6,7 @@ module Rails
       def construct_typeform_hidden_variables
         params = {}
         if current_user
-          params['username'] = current_user.username
+          params['username'] = defined?(current_user.username) ? current_user.username : nil
           params['user_id'] = current_user.id
           params['rtbf_uuid'] = "rtbf-#{current_user.rtbf_uuid}"
         else
