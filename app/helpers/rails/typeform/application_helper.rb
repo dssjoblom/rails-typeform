@@ -8,7 +8,7 @@ module Rails
         if current_user
           params['username'] = defined?(current_user.username) ? current_user.username : nil
           params['user_id'] = current_user.id
-          params['rtbf_uuid'] = "rtbf-#{current_user.rtbf_uuid}"
+          params['rtbf_uuid'] = defined?(current_user.rtbf_uuid) ? "rtbf-#{current_user.rtbf_uuid}" : nil
         else
           params['username'] = nil
           params['user_id'] = nil
