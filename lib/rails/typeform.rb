@@ -6,7 +6,9 @@ module Rails
     # Your code goes here...
 
     module Controller
-      before_action :init_feedback_forms # Adds default load trigger. New triggers can be added with add_feedback_trigger
+      included do
+        before_action :init_feedback_forms # Adds default load trigger. New triggers can be added with add_feedback_trigger
+      end
 
       def init_feedback_forms
         controller = params[:controller]
