@@ -1,12 +1,12 @@
-<% if @feedback_form %>
+<% if @rails_typeform_config.form %>
 
   <% icon_sz = if browser.device.mobile? then 21 else 24 end %>
   <% circle_sz = if browser.device.mobile? then 48 else 54 end %>
   <% right = if browser.device.mobile? then 18 else 26 end %>
   <% bottom = if browser.device.mobile? then 48 else 56 end %>
 
-  <a class="typeform-share button <%= if @feedback_form_nudge then "animate__animated animate__heartBeat animate__infinite" else '' end %>"
-     href="<%= "https://form.typeform.com/to/#{@feedback_form.typeform_id}?typeform-medium=embed-snippet&#{construct_typeform_hidden_variables}" %>"
+  <a class="typeform-share button <%= if @rails_typeform_config.nudge then "animate__animated animate__heartBeat animate__infinite" else '' end %>"
+     href="<%= "https://form.typeform.com/to/#{@rails_typeform_config.form.typeform_id}?typeform-medium=embed-snippet&#{@rails_typeform_config.encode_hidden_variables}" %>"
      data-mode="drawer_right"
      style="width:<%= circle_sz %>px;height:<%= circle_sz %>px;position:fixed;box-shadow:0px 2px 12px rgba(0, 0, 0, 0.06), 0px 2px 4px rgba(0, 0, 0, 0.08);right:<%= right %>px;bottom:<%= bottom %>px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;background:#6f5191;overflow:hidden;line-height:0;z-index: 10001;"
      target="_blank">
