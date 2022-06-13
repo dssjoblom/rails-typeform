@@ -8,6 +8,7 @@ Install migrations and run them:
 
 ```
 bin/rails rails_typeform:install:migrations
+bin/rails db:migrate
 ```
 
 In your ApplicationController:
