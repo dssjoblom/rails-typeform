@@ -20,9 +20,11 @@ module Rails
         self.hidden_variables = {}
       end
 
-      def add_trigger(trigger)
+      def add_trigger(trigger, do_recreate=true)
         triggers.push trigger
-        recreate
+        if do_recreate
+          recreate
+        end
       end
 
       def add_hidden_variable(key, value)
@@ -59,9 +61,9 @@ module Rails
         controller = params[:controller]
         action = params[:action]
         @rails_typeform_config = Rails::Typeform::FormConfig.new
-        @rails_typeform_config.add_trigger '*/*:load'
-        @rails_typeform_config.add_trigger "#{controller}/*:load"
-        @rails_typeform_config.add_trigger "#{controller}/#{action}:load"
+        @rails_typeform_config.add_trigger '*/*:load', false
+        @rails_typeform_config.add_trigger "#{controller}/*:load", false
+        @rails_typeform_config.add_trigger "#{controller}/#{action}:load", false
         @rails_typeform_config.recreate
       end
     end
