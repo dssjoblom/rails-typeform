@@ -34,6 +34,12 @@ In your application.html.erb (or other suitable template):
 <%= render partial: 'layouts/rails/typeform/feedback_form' %>
 ```
 
+Include CSS (in application.scss or similar):
+
+```CSS
+@include "rails/typeform/application"
+```
+
 After this, simply add the correct configuration to the database
 and voila, the form will be rendered correctly.
 

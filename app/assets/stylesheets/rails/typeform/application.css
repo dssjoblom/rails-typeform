@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+.rails-typeform-button {
+  width: 54px;
+  height: 54px;
+  position:fixed;
+  box-shadow:0px 2px 12px rgba(0, 0, 0, 0.06), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  right: 26px;
+  bottom: 56px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  background: var(--rails-typeform-button-bg, #6f5191);
+  color: var(--rails-typeform-button-fg, white);
+  overflow:hidden;
+  line-height:0;
+  z-index: 10001;
+}
+
+.rails-typeform-button svg {
+  width: 24px;
+  height: 24px;
+  margin-top:6px;
+}
+
+@media screen and (max-width: 768px) {
+  .rails-typeform-button {
+    width: 48px;
+    height: 48px;
+    right: 18px;
+    bottom: 48px;
+  }
+
+  .rails-typeform-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
