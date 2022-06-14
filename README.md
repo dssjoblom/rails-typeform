@@ -34,10 +34,18 @@ In your application.html.erb (or other suitable template):
 <%= render partial: 'layouts/rails/typeform/feedback_form' %>
 ```
 
-Include CSS (in application.scss or similar):
+Include CSS:
 
-```CSS
-@include "rails/typeform/application"
+In `app/assets/config/manifest.js`:
+
+```
+//= link rails/typeform/application.css
+```
+
+In your application.html.erb (or other suitable template):
+
+```
+<%= stylesheet_link_tag "rails/typeform/application.css", "data-turbo-track": "reload" %>
 ```
 
 After this, simply add the correct configuration to the database
