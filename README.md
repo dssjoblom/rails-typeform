@@ -1,8 +1,8 @@
 # Rails::Typeform
-Short description and motivation.
+
+A simple gem for embedding Typeform forms into Rails templates.
 
 ## Usage
-How to use my plugin.
 
 Install migrations and run them:
 
@@ -11,13 +11,7 @@ bin/rails rails_typeform:install:migrations
 bin/rails db:migrate
 ```
 
-In your ApplicationController:
-
-```ruby
-include Rails::Typeform::Controller
-```
-
-In your application.html.erb:
+In your application.html.erb (or other suitable template):
 
 ```
 <%= render partial: 'layouts/rails/typeform/feedback_form' %>
@@ -44,7 +38,8 @@ $ gem install rails-typeform
 ```
 
 ## Contributing
-Contribution directions go here.
+
+Send me a pull request and I'll see what I can do to integrate it.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
