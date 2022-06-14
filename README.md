@@ -2,6 +2,23 @@
 
 A simple gem for embedding Typeform forms into Rails templates.
 
+## Installation
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'rails-typeform'
+```
+
+And then execute:
+```bash
+$ bundle
+```
+
+Or install it yourself as:
+```bash
+$ gem install rails-typeform
+```
+
 ## Usage
 
 Install migrations and run them:
@@ -19,23 +36,6 @@ In your application.html.erb (or other suitable template):
 
 After this, simply add the correct configuration to the database
 and voila, the form will be rendered correctly.
-
-## Installation
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'rails-typeform'
-```
-
-And then execute:
-```bash
-$ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install rails-typeform
-```
 
 ## Contributing
 
