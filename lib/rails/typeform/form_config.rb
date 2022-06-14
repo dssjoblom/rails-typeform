@@ -6,7 +6,8 @@ module Rails
                     :forms,
                     :form,
                     :nudge,
-                    :hidden_variables
+                    :hidden_variables,
+                    :show_in_new_window
 
       def initialize
         self.triggers = []
@@ -14,6 +15,7 @@ module Rails
         self.forms = []
         self.nudge = false
         self.hidden_variables = {}
+        self.new_window = false
       end
 
       def add_trigger(trigger, do_recreate=true)
