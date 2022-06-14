@@ -1,5 +1,5 @@
 <% if @rails_typeform_config.form %>
-  <a class="typeform-share button <%= if @rails_typeform_config.nudge then "animate__animated animate__heartBeat animate__infinite" else '' end %>"
+  <a class="rails-typeform-button <%= if @rails_typeform_config.nudge then "animate__animated animate__heartBeat animate__infinite" else '' end %>"
      href="<%= "https://form.typeform.com/to/#{@rails_typeform_config.form.typeform_id}?typeform-medium=embed-snippet&#{@rails_typeform_config.encode_hidden_variables}" %>"
      data-mode="drawer_right"
      style=""
