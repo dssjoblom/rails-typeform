@@ -28,7 +28,7 @@ bin/rails rails_typeform:install:migrations
 bin/rails db:migrate
 ```
 
-In your application.html.erb (or other suitable template):
+In your `application.html.erb` (or other suitable template):
 
 ```
 <%= render partial: 'layouts/rails/typeform/feedback_form' %>
@@ -42,7 +42,7 @@ In `app/assets/config/manifest.js`:
 //= link rails/typeform/application.css
 ```
 
-In your application.html.erb (or other suitable template):
+In your `application.html.erb` (or other suitable template):
 
 ```
 <%= stylesheet_link_tag "rails/typeform/application.css", "data-turbo-track": "reload" %>
