@@ -49,7 +49,26 @@ In your `application.html.erb` (or other suitable template):
 ```
 
 After this, simply add the correct configuration to the database
-and voila, the form will be rendered correctly.
+as described in the next section and voila, the form will be rendered correctly.
+
+## Configuration
+
+The available TypeForms, and the pages which they are rendered on are
+configured via the `Rails::Typeform::FeedbackForm` model.
+
+For basic use, specify the following fields:
+
+- `language: '*'` (form is displayed for any I18n.locale)
+- `trigger: '*/*:load'` (form is displayed for any controller action)
+- `typeform_id: YOUR_ID_GOES_HERE` (input the id of your typeform here)
+
+Try this in your `rails console` for a sample form:
+
+```
+Rails::Typeform::FeedbackForm.create(language: '*', trigger: '*/*:load', typeform_id: "RFXNBcWD")
+```
+
+For production use, substitute your own TypeForms.
 
 ## Contributing
 
