@@ -70,6 +70,16 @@ Rails::Typeform::FeedbackForm.create(language: '*', trigger: '*/*:load', typefor
 
 For production use, substitute your own TypeForms.
 
+## Customization
+
+You can change the button color via a CSS variable:
+
+```
+:root {
+  --rails-typeform-button-bg: #acbeff;
+}
+```
+
 ## Contributing
 
 Send me a pull request and I'll see what I can do to integrate it.
